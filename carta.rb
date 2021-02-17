@@ -18,9 +18,9 @@ end
 #Crear el constructor de la clase carta que le permita recibir un numero del 1 al 13 y la pinta que está indicada por una sola letra. Puede ser Corazón: 'C', Diamante: 'D', Espada: 'E' o Trébol: 'T'
 
 first_carta = Carta.new(["c", "d", "e", "t"], Random.rand(1...13))
-number = [c = 'clubs', d = 'diamonds', h = 'hearts', s = 'spades']
+number = [c = 'hearts', d = 'diamonds', t = 'clover', e = 'spades']
 puts first_carta.color
-#Para escoger un número al azar ocupar Random.rand(rango_inferior, rango_superior
+#Para escoger un número al azar ocupar Random.rand(rango_inferior, rango_superior)
 
 array = []
 5.times do
