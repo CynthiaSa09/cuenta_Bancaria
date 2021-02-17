@@ -1,30 +1,33 @@
 class Carta
     #Crear la clase carta con los atributos numero y pinta (o color)    
     
-    attr_accessor :number, :color
+    attr_accessor :color, :number
     #Agregar los getters y setters a ambos atributos
     
-    def initialize(number, color)
-        @number = number
+    def initialize(color, number)
         @color = color
+        @number = number
+        
     end
     def self.number
         Random.rand(1..13)
     end
-    def self.color
+    def self.takeColor#llama el metodo desde la clase y no del objeto
         ['C', 'D', 'E', 'T'].sample
     end
+
 end
 #Crear el constructor de la clase carta que le permita recibir un numero del 1 al 13 y la pinta que está indicada por una sola letra. Puede ser Corazón: 'C', Diamante: 'D', Espada: 'E' o Trébol: 'T'
 
 first_carta = Carta.new(["c", "d", "e", "t"], Random.rand(1...13))
-number = [c = 'hearts', d = 'diamonds', t = 'clover', e = 'spades']
-puts first_carta.color
+#number = [c = 'hearts', d = 'diamonds', t = 'clover', e = 'spades']
+print first_carta.number
+puts
 #Para escoger un número al azar ocupar Random.rand(rango_inferior, rango_superior)
 
 array = []
 5.times do
-    color = Carta.color
+    color = Carta.takeColor
     number = Carta.number
     carta = Carta.new(number, color)
     array.push carta
